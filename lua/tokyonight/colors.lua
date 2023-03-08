@@ -5,8 +5,8 @@ local M = {}
 ---@class Palette
 M.default = {
   none = "NONE",
-  bg_dark = "#1f2335",
-  bg = "#24283b",
+  bg_dark = "#000000",
+  bg = "#050505",
   bg_highlight = "#292e42",
   terminal_black = "#414868",
   fg = "#c0caf5",
@@ -131,12 +131,12 @@ function M.setup(opts)
 
   -- Sidebar and Floats are configurable
   colors.bg_sidebar = config.options.styles.sidebars == "transparent" and colors.none
-    or config.options.styles.sidebars == "dark" and colors.bg_dark
-    or colors.bg
+      or config.options.styles.sidebars == "dark" and colors.bg_dark
+      or colors.bg
 
   colors.bg_float = config.options.styles.floats == "transparent" and colors.none
-    or config.options.styles.floats == "dark" and colors.bg_dark
-    or colors.bg
+      or config.options.styles.floats == "dark" and colors.bg_dark
+      or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.4)
   colors.bg_search = colors.blue0
